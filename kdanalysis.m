@@ -5,7 +5,7 @@ load('Season3playoffdata.mat');
 
 kd = [];
 maxkd = [];
-
+teamname = {};
 for h = 1:numel(Players)
     
     name = Players{h};
@@ -18,20 +18,21 @@ for h = 1:numel(Players)
         if strcmp(name,char(Season3Playoffs(i,4)))
            
             playerkd = [playerkd , Season3Playoffs{i,7}/Season3Playoffs{i,8} ];
-            currmax = max(currmax , Season3Playoffs{i,7}/Season3Playoffs{i,8}  );
+            playerteam = char(Season3Playoffs{i,5});
         end
         
     end
     
     kd = [ kd ; mean(playerkd)];
-    maxkd = [maxkd ; currmax];
+    maxkd = [maxkd ; max(playerkd(:))];
+    teamname{h} = playerteam;
     
     hold on
     scatter(h*ones(1,numel(playerkd)),playerkd ,'fill');
     
 end
 
-xticks([1:numel(Players)])
+xticks(1:numel(Players))
 xticklabels(Players);
 xtickangle(60)
 
@@ -44,10 +45,17 @@ for i = 1:numel(Players)
     Playerdata{i,1} = Players{i};
     Playerdata{i,2} = kd(i);
     Playerdata{i,3} = maxkd(i);
+    Playerdata{i,4} = teamname{i};
     
 end
 
-% Find player highest kd
+
+figure
+
+%Carriers
+
+figure
+
 
 
 
