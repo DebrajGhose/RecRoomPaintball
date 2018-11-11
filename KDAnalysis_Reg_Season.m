@@ -65,7 +65,7 @@ for i = 1:numel(Teams)
         if strcmp(Teams{i},char(Playerdata{j,4}))
             
             players = [players, char(Playerdata{j,1}) ];
-            kds = [kds , Playerdata{j,2} ]
+            kds = [kds , Playerdata{j,2} ];
             
         end
         
