@@ -4,7 +4,6 @@ close all
 load('Season3playoffdata.mat');
 load('Players.mat');
 
-
 %spread of all player kds
 
 kd = [];
@@ -27,8 +26,8 @@ for h = 2:size(Players,1)
     end
     
     Players{h,4} = playerkd;
-    Players{h,5} = max(playerkd(:));
-    
+    Players{h,5} = mean(playerkd(:));
+    Players{h,6} = max(playerkd(:));
     
 end
 
@@ -37,7 +36,7 @@ i = 1;
 while i<size(Players,1)
     
    i = i+1;
-    if isnan(cell2mat(Players(i,4))), Players(i,:)=[]; i = i-1; end
+    if isempty(cell2mat(Players(i,4))), Players(i,:)=[]; i = i-1; end
     
 end
 
@@ -45,21 +44,51 @@ end
 figure
 
 for i = 2:size(Players,1)
-   scatter(i*ones(1,numel(cell2mat(Players(i,4))),cell2mat(Players(i,4)));
+    hold on
+   scatter(  i*ones(1,numel(cell2mat(Players(i,4)))),cell2mat(Players(i,4)),'fill');
     
 end
 
 xticks(2:size(Players,1))
 xticklabels(Players(2:end,1));
+set(gca,'TickLabelInterpreter','none');
 xtickangle(60)
 
 
 %cost vs kd graph
 
 figure
-plot(cell2mat(Players(2:end,2)),cell2mat(Players(2:end,4)),'.');
+plot(cell2mat(Players(2:end,2)),cell2mat(Players(2:end,5)),'.');
+p = polyfit(cell2mat(Players(2:end,2)),cell2mat(Players(2:end,5)),1);
+hold on
+plot( cell2mat(Players(2:end,2)) , p(1)*cell2mat(Players(2:end,2)) + p(2));
+
+xlabel('Player Cost'); ylabel('Avg kd');
 
 figure
 %cost vs max kd
-plot(cell2mat(Players(2:end,2)),cell2mat(Players(2:end,5)),'.');
+plot(cell2mat(Players(2:end,2)),cell2mat(Players(2:end,6)),'.');
+p = polyfit(cell2mat(Players(2:end,2)),cell2mat(Players(2:end,6)),1);
+hold on
+plot( cell2mat(Players(2:end,2)) , p(1)*cell2mat(Players(2:end,2)) + p(2));
 
+xlabel('Player Cost'); ylabel('Max kd');
+
+
+function [dotcolor] = choosedotcolor(teamname)
+
+case 'Black'
+    
+    case 'Orange'
+        
+        case 'Teal'
+case 'Purple'
+    
+    case 'Pink'
+        
+        case 'Black'
+    
+
+
+
+end
