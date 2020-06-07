@@ -9,3 +9,6 @@ Error bars (when present) represent standard error of the mean. The dotted black
 ![Cost vs k/d](https://github.com/DebrajGhose/RecRoomPaintball/blob/master/Season%205/CostvsKD.svg)
 
 
+## k/d spread across all players for Team Battle mode
+
+![k/ds for each player](https://github.com/DebrajGhose/RecRoomPaintball/blob/master/Season%205/KDspread.svg)
