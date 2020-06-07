@@ -3,7 +3,7 @@ clear all
 close all
 %%
 colors = [0 0 0;...
-     0.2161    0.7843    0.5923;
+     0.1161    0.7843    0.123;
      0.9970    0.569    0.2199;
      1 0.71 0.71;
      0.810    0.2228    0.9979;
@@ -190,7 +190,7 @@ if costvskd == 1 %calculate cost vs kd for team battle games
     plot( [min(costs), max(costs)] , [ min(costs)*pf(1) + pf(2) , max(costs)*pf(1) + pf(2) ] , '--k' )
     
     scatter( costs, meankds , 50 , 'fill' ,'cdata' , dotcolors ,'MarkerEdgeColor', 'k' ); %overlay scatte plot
-   xlabel('Player Cost');
+    xlabel('Player Cost');
     ylabel('Mean k/d')
     title('Cost vs k/d (Team Battle)')
     set(gca,'FontSize',15)
@@ -237,9 +237,20 @@ if playerkdspread == 1
     meankds = []; %store all players kds here
     dotcolors = [];
     
+    colcount = 0; %indicate team colors
+    hold on
+    for aa = [0.5:6:42.5]
+        colcount = colcount + 1;
+        rectangle( 'Position' , [aa -0.1 6 0.1  ] ,'FaceColor', colors(colcount,:) )
+        plot( [ aa aa  ],[ 0  3  ] , '--k'   )
+    end
+    grid on
+    set(gca,'XGrid','off')
+    
     for ii = 1:size(playerlist,1)
         
         kds = [];
+        oppdotcolors = [];
         
         for jj = 1:size(GD,1)
            
@@ -247,28 +258,28 @@ if playerkdspread == 1
                
                 kds = [kds ; GD{jj,8}/GD{jj,9}]; %get kd
                 dotcolor = colors(find(strcmp(teamlist, GD{jj,3})),:); %get dot color
-                oppdotcolr = colors(find(strcmp(teamlist, GD{jj,3})),:);%get color of opponent
+                oppdotcolors = [ oppdotcolors ; colors(find(strcmp(teamlist, GD{jj,4})),:)];%get color of opponent
             end
             
         end
         
         hold on
         
-        scatter(ones(numel(kds),1)*ii,kds,60,'fill','MarkerFaceColor',dotcolor,'MarkerEdgeColor','k');
         
-        for ii = [6.5:6:42.5]
-            
-            plot( [ii ii] , [ 0, 3  ] ,'--k' )
-            
-        end
+        %scatter(ones(numel(kds),1)*ii,kds,200,'fill','MarkerFaceColor',dotcolor,'MarkerEdgeColor','k') %k/ds of players
+        scatter(ones(numel(kds),1)*ii,kds,60,'fill','cdata', oppdotcolors ,'MarkerEdgeColor','k' ) %show color of opponents
+        
+        
         %
         set(gca,'FontSize',15)
         
         title('k/d spread for team battle mode')
         
-        xlim([0 49])
+        xlim([0.5 48.5])
+        ylim([-0.1 Inf])
         
     end
+    
     
     xticks([1:size(playerlist,1)]-0.7)
     xticklabels(playerlist)
