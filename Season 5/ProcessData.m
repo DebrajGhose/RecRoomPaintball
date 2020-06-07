@@ -15,7 +15,7 @@ colors = [0 0 0;...
 %%
 formatdata = 0;
 costvskd = 1;
-
+playerkdspread = 0;
 
 
 if formatdata == 1
@@ -147,7 +147,7 @@ if costvskd == 1 %calculate cost vs kd for team battle games
     costs = [];
     dotcolors = [];
     
-    for ii = 2:size(playerlist,1)
+    for ii = 1:size(playerlist,1)
         
         kds = [];
         
@@ -217,6 +217,43 @@ if costvskd == 1 %calculate cost vs kd for team battle games
    
     
 end
+
+if playerkdspread == 1
+   
+     load('GoodData.mat')
+    
+    meankds = []; %store all players kds here
+    dotcolors = [];
+    
+    for ii = 1:size(playerlist,1)
+        
+        kds = [];
+        
+        for jj = 1:size(GD,1)
+           
+            if strcmp(GD{jj,6},playerlist{ii}) && contains(GD{jj,2},'TB') && ~isempty(GD{jj,8}) && ~isempty(GD{jj,9}) %do this only for team battle games
+               
+                kds = [kds ; GD{jj,8}/GD{jj,9}]; %get kd
+                dotcolor = colors(find(strcmp(teamlist, GD{jj,3})),:); %get dot color
+                
+            end
+            
+        end
+        
+        hold on
+        
+        scatter(ones(numel(kds),1)*ii,kds,'fill','MarkerFaceColor',dotcolor,'MarkerEdgeColor','k');
+        
+        %
+        set(gca,'FontSize',15)
+        
+    end
+    
+    xticks([1:size(playerlist,1)])
+    xticklabels(playerlist)
+    xtickangle(80)
+end
+
 
 function [playerlist , maplist , teamlist] = generate_noun_list(GD) %generate lists of players, maps, teams, etc.
 
