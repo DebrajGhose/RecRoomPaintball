@@ -6,7 +6,7 @@ Data collected by M24 (https://rec.net/user/M24rink).
 
 Error bars (when present) represent standard error of the mean. The dotted black line is a linear fit to the entire cost vs k/d for the entire data set (first graph).
 
-![Cost vs k/d](https://github.com/DebrajGhose/RecRoomPaintball/blob/master/Season%205/CostvsKD.svg)
+![Cost vs k/d](https://raw.githubusercontent.com/DebrajGhose/RecRoomPaintball/97a03a6080cd2d71011625c273354d4484139cdc/Season%205/CostvsKD.svg)
 
 
 ## k/d spread across all players for Team Battle mode
