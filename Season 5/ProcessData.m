@@ -254,6 +254,8 @@ if playerkdspread == 1
         
         title('k/d spread for team battle mode')
         
+        xlim([0 49])
+        
     end
     
     xticks([1:size(playerlist,1)]-0.7)
