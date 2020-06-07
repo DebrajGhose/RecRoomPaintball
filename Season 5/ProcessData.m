@@ -15,8 +15,8 @@ colors = [0 0 0;...
 %% format data into computationally useable format
 
 formatdata = 0;
-costvskd = 1;
-playerkdspread = 0;
+costvskd = 0;
+playerkdspread = 1;
 
 
 if formatdata == 1
@@ -275,7 +275,7 @@ if playerkdspread == 1
         
         title('k/d spread for team battle mode')
         
-        xlim([0.5 48.5])
+        xlim([0 49])
         ylim([-0.1 Inf])
         
     end
