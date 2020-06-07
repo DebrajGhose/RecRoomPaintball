@@ -3,14 +3,14 @@ clear all
 close all
 %%
 colors = [0 0 0;...
-     0.1161    0.7843    0.123;
-     0.9970    0.569    0.2199;
-     1 0.71 0.71;
-     0.810    0.2228    0.9979;
-     0.0689    0.5948    0.8394;
-     1 1 1;
-     0.9970    0.7659    0.2199];
- %scatter(1:8,1:8,400,'fill','cdata',colors)
+    0.1161    0.7843    0.123;
+    0.9970    0.569    0.2199;
+    1 0.71 0.71;
+    0.810    0.2228    0.9979;
+    0.0689    0.6948    0.8394;
+    1 1 1;
+    0.9970    0.7659    0.2199];
+%scatter(1:8,1:8,400,'fill','cdata',colors)
 
 %% format data into computationally useable format
 
@@ -59,6 +59,9 @@ if formatdata == 1
         
     end
     
+    A = [A , cell(size(A,1),1) ]; %pad A with a rubbish array to make next step easier
+    
+    
     GD = cell(100,9); %create Good data cell array
     GD{1,1} = 'Week';
     GD{1,2} = 'GameType';
@@ -88,7 +91,7 @@ if formatdata == 1
                     if ~isempty(A{ii,jj})
                         
                         Hits = A{ii,jj};
-                       
+                        
                         Side = A{3,jj};
                     end
                     
@@ -122,7 +125,7 @@ if formatdata == 1
             end
             
             if (~strcmp(char(A{2,jj}),char(A{2,jj+1})) && ~isempty(Result)) %switch to new row in the matrix you are copying to when you are done with a game
-                
+                %disp(GameType)
                 GDind = GDind + 1;
                 
                 GD(GDind,:) = { Week , GameType, Team, Opponent, Result, Player, Cost, Hits, Outs, Side };
@@ -147,7 +150,7 @@ end
 %% generate cost vs k/d plots
 
 if costvskd == 1 %calculate cost vs kd for team battle games
-
+    
     load('GoodData.mat')
     
     meankds = []; %store all players kds here
@@ -160,9 +163,9 @@ if costvskd == 1 %calculate cost vs kd for team battle games
         kds = [];
         
         for jj = 1:size(GD,1)
-           
+            
             if strcmp(GD{jj,6},playerlist{ii}) && contains(GD{jj,2},'TB') && ~isempty(GD{jj,8}) && ~isempty(GD{jj,9}) %do this only for team battle games
-               
+                
                 kds = [kds ; GD{jj,8}/GD{jj,9}]; %get kd
                 cost = GD{jj,7}; %get cost
                 dotcolor = colors(find(strcmp(teamlist, GD{jj,3})),:); %get dot color
@@ -190,7 +193,7 @@ if costvskd == 1 %calculate cost vs kd for team battle games
     plot( [min(costs), max(costs)] , [ min(costs)*pf(1) + pf(2) , max(costs)*pf(1) + pf(2) ] , '--k' )
     
     scatter( costs, meankds , 50 , 'fill' ,'cdata' , dotcolors ,'MarkerEdgeColor', 'k' ); %overlay scatte plot
-   xlabel('Player Cost');
+    xlabel('Player Cost');
     ylabel('Mean k/d')
     title('Cost vs k/d (Team Battle)')
     set(gca,'FontSize',15)
@@ -200,30 +203,30 @@ if costvskd == 1 %calculate cost vs kd for team battle games
     xlim([0 180])
     for ii=1:8
         
-    subplot(3,3,ii+1)
-    hold on
-    
-    plot( [min(costs), max(costs)] , [ min(costs)*pf(1) + pf(2) , max(costs)*pf(1) + pf(2) ] , '--k' )
-    
+        subplot(3,3,ii+1)
+        hold on
+        
+        plot( [min(costs), max(costs)] , [ min(costs)*pf(1) + pf(2) , max(costs)*pf(1) + pf(2) ] , '--k' )
+        
         teamplayers = ismember(dotcolors,colors(ii,:) ,'row');
         usecolor = dotcolors(find(teamplayers,1),:);
-      errorbar(costs(teamplayers),meankds(teamplayers),errkds(teamplayers),'o','Color',usecolor.*[0.8 0.8 0.8],'MarkerEdgeColor', 'k','MarkerFaceColor', usecolor,'MarkerSize',7);
-      
+        errorbar(costs(teamplayers),meankds(teamplayers),errkds(teamplayers),'o','Color',usecolor.*[0.8 0.8 0.8],'MarkerEdgeColor', 'k','MarkerFaceColor', usecolor,'MarkerSize',7);
+        
         ylim([0 3])
         xlim([0 180])
         
         
         set(gca,'FontSize',15)
         axis square
-         xlabel('Player Cost');
-    ylabel('Mean k/d')
-    
-         title(teamlist{ii,1})
-    
+        xlabel('Player Cost');
+        ylabel('Mean k/d')
+        
+        title(teamlist{ii,1})
+        
     end
     
-   set(gcf,'Units','Normalized','Position',[0 0 1 1])
-   
+    set(gcf,'Units','Normalized','Position',[0 0 1 1])
+    
     saveas(gcf,'CostvsKD.svg')
     
 end
@@ -231,11 +234,29 @@ end
 %% get k/d spread for all players
 
 if playerkdspread == 1
-   
-     load('GoodData.mat')
+    
+    load('GoodData.mat')
     
     meankds = []; %store all players kds here
     dotcolors = [];
+    
+    
+    hold on
+    for aa = [0.5:1:49]
+        plot( [ aa aa  ],[ 0  3  ] ,'LineStyle' ,'' ,'Color', [0.8 0.8 0.8]  )
+    end
+    
+    colcount = 0; %indicate team colors
+    for aa = [0.5:6:42.5]
+        colcount = colcount + 1;
+        rectangle( 'Position' , [aa -0.1 6 0.1  ] ,'FaceColor', colors(colcount,:) )
+        plot( [ aa aa  ],[ 0  3  ] , '--k'   )
+    end
+    
+    
+    
+    grid on
+    set(gca,'XGrid','off')
     
     for ii = 1:size(playerlist,1)
         
@@ -243,9 +264,9 @@ if playerkdspread == 1
         oppdotcolors = [];
         
         for jj = 1:size(GD,1)
-           
+            
             if strcmp(GD{jj,6},playerlist{ii}) && contains(GD{jj,2},'TB') && ~isempty(GD{jj,8}) && ~isempty(GD{jj,9}) %do this only for team battle games
-               
+                
                 kds = [kds ; GD{jj,8}/GD{jj,9}]; %get kd
                 dotcolor = colors(find(strcmp(teamlist, GD{jj,3})),:); %get dot color
                 oppdotcolors = [ oppdotcolors ; colors(find(strcmp(teamlist, GD{jj,4})),:)];%get color of opponent
@@ -256,22 +277,9 @@ if playerkdspread == 1
         hold on
         
         
-        scatter(ones(numel(kds),1)*ii,kds,200,'fill','MarkerFaceColor',dotcolor,'MarkerEdgeColor','k') %k/ds of players
-        %scatter(ones(numel(kds),1)*ii,kds,60,'fill','cdata', oppdotcolors ,'MarkerEdgeColor','w' ) %show color of opponents
+        %scatter(ones(numel(kds),1)*ii,kds,200,'fill','MarkerFaceColor',dotcolor,'MarkerEdgeColor','k') %k/ds of players
+        scatter(ones(numel(kds),1)*ii + 0.2*(rand(numel(kds),1)-0.5),kds,60,'fill','cdata', oppdotcolors ,'MarkerEdgeColor','k' ) %show color of opponents
         
-       
-        
-        for ii = [6.5:6:42.5]
-            
-            plot( [ii ii] , [ 0, 3  ] ,'--k' )
-            
-        end
-        
-        for ii = [0:6:48]
-            
-            rectangle( [ii 0  3  ] ,'FaceColor',rand(1,3) )
-            
-        end
         
         %
         set(gca,'FontSize',15)
@@ -279,13 +287,15 @@ if playerkdspread == 1
         title('k/d spread for team battle mode')
         
         xlim([0 49])
+        ylim([-0.1 Inf])
         
     end
+    
     
     xticks([1:size(playerlist,1)]-0.7)
     xticklabels(playerlist)
     xtickangle(80)
-    set(gcf,'Position',[100 100 1500 500])
+    set(gcf,'Units','Normalized','Position',[0 0 1 1])
     saveas(gcf,'KDspread.svg')
     
 end
@@ -293,7 +303,7 @@ end
 
 function [playerlist , maplist , teamlist] = generate_noun_list(GD) %generate lists of players, maps, teams, etc.
 
-playerlist = {}; plcount = 1; 
+playerlist = {}; plcount = 1;
 maplist = {}; mcount = 1;
 teamlist = {}; tcount = 1;
 

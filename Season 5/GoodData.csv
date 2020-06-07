@@ -6,6 +6,7 @@ Week 2,Quarry (CTF),Black,Pink,L,DrDash,5,9,21,Blue Team
 Week 4,River (CTF),Black,Yellow,L,DrDash,5,19,40,Blue Team
 Week 4,Homestead (TB),Black,Purple,L,DrDash,5,14,29,Blue Team
 Week 5,Quarry (CTF),Black,Orange,W,DrDash,5,18,31,Red Team
+Week 5,Clearcut (TB),Black,Pink,L,DrDash,5,11,26,Blue Team
 Week 1,River (TB),Black,Purple,Forfeit (L),Elijah,0,,,
 Week 2,Clearcut (TB),Black,White,L,Elijah,0,30,27,Red Team
 Week 3,Spillway (TB),Black,Green,W,Elijah,0,29,21,Red Team
@@ -22,6 +23,7 @@ Week 3,Drive-In (TB),Black,Teal,L,Sean,60,25,20,Red Team
 Week 4,River (CTF),Black,Yellow,L,Sean,60,25,41,Blue Team
 Week 4,Homestead (TB),Black,Purple,L,Sean,60,12,12,Blue Team
 Week 5,Quarry (CTF),Black,Orange,W,Sean,60,38,32,Red Team
+Week 5,Clearcut (TB),Black,Pink,L,Sean,60,21,22,Blue Team
 Week 1,River (TB),Black,Purple,Forfeit (L),SPR,119,,,
 Week 1,Homestead (TB),Black,Orange,L,SPR,119,31,23,Red Team
 Week 2,Quarry (CTF),Black,Pink,L,SPR,119,11,12,Blue Team
@@ -30,6 +32,7 @@ Week 3,Drive-In (TB),Black,Teal,L,SPR,119,24,21,Red Team
 Week 4,River (CTF),Black,Yellow,L,SPR,119,31,37,Blue Team
 Week 4,Homestead (TB),Black,Purple,L,SPR,119,25,35,Blue Team
 Week 5,Quarry (CTF),Black,Orange,W,SPR,119,22,12,Red Team
+Week 5,Clearcut (TB),Black,Pink,L,SPR,119,28,24,Blue Team
 Week 1,River (TB),Black,Purple,Forfeit (L),Tape,5,,,
 Week 1,Homestead (TB),Black,Orange,L,Tape,5,22,28,Red Team
 Week 2,Clearcut (TB),Black,White,L,Tape,5,9,25,Red Team
@@ -38,6 +41,7 @@ Week 3,Drive-In (TB),Black,Teal,L,Tape,5,11,24,Red Team
 Week 4,River (CTF),Black,Yellow,L,Tape,5,26,35,Blue Team
 Week 4,Homestead (TB),Black,Purple,L,Tape,5,28,24,Blue Team
 Week 5,Quarry (CTF),Black,Orange,W,Tape,5,18,31,Red Team
+Week 5,Clearcut (TB),Black,Pink,L,Tape,5,7,28,Blue Team
 Week 1,River (TB),Green,Pink,L,Burn,27,17,21,Red Team
 Week 1,Homestead (TB),Green,White,W,Burn,27,33,23,Blue Team
 Week 2,Quarry (CTF),Green,Yellow,L,Burn,27,25,33,Blue Team
@@ -46,6 +50,7 @@ Week 3,Spillway (TB),Green,Black,L,Burn,27,28,22,Blue Team
 Week 3,Drive-In (TB),Green,Purple,L,Burn,27,21,23,Red Team
 Week 4,River (CTF),Green,Orange,L,Burn,27,30,27,Red Team
 Week 5,Quarry (CTF),Green,White,L,Burn,27,17,28,Red Team
+Week 5,Clearcut (TB),Green,Yellow,L,Burn,27,15,19,Blue Team
 Week 1,Homestead (TB),Green,White,W,Dedual,69,27,32,Blue Team
 Week 2,Quarry (CTF),Green,Yellow,L,Dedual,69,27,37,Blue Team
 Week 2,Clearcut (TB),Green,Teal,L,Dedual,69,19,31,Blue Team
@@ -56,18 +61,21 @@ Week 3,Drive-In (TB),Green,Purple,L,Hoborg,30,11,30,Red Team
 Week 4,River (CTF),Green,Orange,L,Hoborg,30,24,36,Red Team
 Week 4,Homestead (TB),Green,Pink,L,Hoborg,30,12,23,Red Team
 Week 5,Quarry (CTF),Green,White,L,Hoborg,30,15,26,Red Team
+Week 5,Clearcut (TB),Green,Yellow,L,Hoborg,30,17,25,Blue Team
 Week 1,River (TB),Green,Pink,L,Joshie,69,20,24,Red Team
 Week 1,Homestead (TB),Green,White,W,Joshie,69,16,25,Blue Team
 Week 2,Clearcut (TB),Green,Teal,L,Joshie,69,13,28,Blue Team
 Week 3,Spillway (TB),Green,Black,L,Joshie,69,22,30,Blue Team
 Week 3,Drive-In (TB),Green,Purple,L,Joshie,69,22,24,Red Team
 Week 4,Homestead (TB),Green,Pink,L,Joshie,69,18,22,Red Team
+Week 5,Clearcut (TB),Green,Yellow,L,Joshie,69,13,27,Blue Team
 Week 1,River (TB),Green,Pink,L,Shorn1,25,16,29,Red Team
 Week 2,Quarry (CTF),Green,Yellow,L,Shorn1,25,17,41,Blue Team
 Week 3,Spillway (TB),Green,Black,L,Shorn1,25,18,24,Blue Team
 Week 3,Drive-In (TB),Green,Purple,L,Shorn1,25,12,23,Red Team
 Week 4,River (CTF),Green,Orange,L,Shorn1,25,21,40,Red Team
 Week 5,Quarry (CTF),Green,White,L,Shorn1,25,8,30,Red Team
+Week 5,Clearcut (TB),Green,Yellow,L,Shorn1,25,22,29,Blue Team
 Week 1,Homestead (TB),Green,White,W,Speedy61,69,24,14,Blue Team
 Week 2,Quarry (CTF),Green,Yellow,L,Speedy61,69,23,28,Blue Team
 Week 2,Clearcut (TB),Green,Teal,L,Speedy61,69,13,23,Blue Team
@@ -87,6 +95,7 @@ Week 3,Drive-In (TB),Orange,White,Forfeit (L),Goose,0,,26,
 Week 4,River (CTF),Orange,Green,W,Goose,0,40,28,Blue Team
 Week 4,Homestead (TB),Orange,Teal,L,Goose,0,13,23,Blue Team
 Week 5,Quarry (CTF),Orange,Black,L,Goose,0,22,24,Blue Team
+Week 5,Clearcut (TB),Orange,Purple,L,Goose,0,20,22,Blue Team
 Week 1,River (TB),Orange,Teal,L,Jimmy Coco,41,11,28,Red Team
 Week 1,Homestead (TB),Orange,Black,W,Jimmy Coco,41,15,14,Blue Team
 Week 2,Quarry (CTF),Orange,Purple,L,Jimmy Coco,41,34,36,Red Team
@@ -96,6 +105,7 @@ Week 3,Drive-In (TB),Orange,White,Forfeit (L),Jimmy Coco,41,,23,
 Week 4,River (CTF),Orange,Green,W,Jimmy Coco,41,35,28,Blue Team
 Week 4,Homestead (TB),Orange,Teal,L,Jimmy Coco,41,19,24,Blue Team
 Week 5,Quarry (CTF),Orange,Black,L,Jimmy Coco,41,27,27,Blue Team
+Week 5,Clearcut (TB),Orange,Purple,L,Jimmy Coco,41,16,29,Blue Team
 Week 1,Homestead (TB),Orange,Black,W,Karmenkbrera,1,24,29,Blue Team
 Week 2,Quarry (CTF),Orange,Purple,L,Karmenkbrera,1,28,31,Red Team
 Week 3,Spillway (TB),Orange,Pink,L,Karmenkbrera,1,14,27,Red Team
@@ -103,6 +113,7 @@ Week 3,Drive-In (TB),Orange,White,Forfeit (L),Karmenkbrera,1,,27,
 Week 4,River (CTF),Orange,Green,W,Karmenkbrera,1,28,29,Blue Team
 Week 4,Homestead (TB),Orange,Teal,L,Karmenkbrera,1,20,28,Blue Team
 Week 5,Quarry (CTF),Orange,Black,L,Karmenkbrera,1,39,28,Blue Team
+Week 5,Clearcut (TB),Orange,Purple,L,Karmenkbrera,1,21,24,Blue Team
 Week 1,River (TB),Orange,Teal,L,NRV,90,17,25,Red Team
 Week 1,Homestead (TB),Orange,Black,W,NRV,90,43,24,Blue Team
 Week 2,Quarry (CTF),Orange,Purple,L,NRV,90,27,40,Red Team
@@ -112,6 +123,7 @@ Week 3,Drive-In (TB),Orange,White,Forfeit (L),NRV,90,,27,
 Week 4,River (CTF),Orange,Green,W,NRV,90,33,19,Blue Team
 Week 4,Homestead (TB),Orange,Teal,L,NRV,90,30,25,Blue Team
 Week 5,Quarry (CTF),Orange,Black,L,NRV,90,29,27,Blue Team
+Week 5,Clearcut (TB),Orange,Purple,L,NRV,90,28,25,Blue Team
 Week 1,Homestead (TB),Pink,Teal,L,Cold Chai,13,28,24,Red Team
 Week 2,Quarry (CTF),Pink,Black,W,Cold Chai,13,19,14,Red Team
 Week 3,Spillway (TB),Pink,Orange,W,Cold Chai,13,21,29,Blue Team
@@ -125,10 +137,12 @@ Week 3,Spillway (TB),Pink,Orange,W,Defeatsbydrtre,54,28,23,Blue Team
 Week 3,Drive-In (TB),Pink,Yellow,W,Defeatsbydrtre,54,32,19,Red Team
 Week 4,Homestead (TB),Pink,Green,W,Defeatsbydrtre,54,24,18,Blue Team
 Week 5,Quarry (CTF),Pink,Teal,L,Defeatsbydrtre,54,31,36,Red Team
+Week 5,Clearcut (TB),Pink,Black,W,Defeatsbydrtre,54,31,13,Red Team
 Week 1,River (TB),Pink,Green,W,Diamond,67,27,17,Blue Team
 Week 2,Quarry (CTF),Pink,Black,W,Diamond,67,26,11,Red Team
 Week 4,River (CTF),Pink,White,L,Diamond,67,18,19,Red Team
 Week 5,Quarry (CTF),Pink,Teal,L,Diamond,67,33,22,Red Team
+Week 5,Clearcut (TB),Pink,Black,W,Diamond,67,32,14,Red Team
 Week 1,River (TB),Pink,Green,W,Embrace,46,31,17,Blue Team
 Week 1,Homestead (TB),Pink,Teal,L,Embrace,46,22,26,Red Team
 Week 2,Clearcut (TB),Pink,Purple,L,Embrace,46,29,24,Blue Team
@@ -136,11 +150,13 @@ Week 3,Spillway (TB),Pink,Orange,W,Embrace,46,28,21,Blue Team
 Week 3,Drive-In (TB),Pink,Yellow,W,Embrace,46,25,28,Red Team
 Week 4,River (CTF),Pink,White,L,Embrace,46,11,15,Red Team
 Week 4,Homestead (TB),Pink,Green,W,Embrace,46,14,21,Blue Team
+Week 5,Clearcut (TB),Pink,Black,W,Embrace,46,19,16,Red Team
 Week 1,River (TB),Pink,Green,W,Red Joker,93,23,15,Blue Team
 Week 2,Quarry (CTF),Pink,Black,W,Red Joker,93,7,11,Red Team
 Week 2,Clearcut (TB),Pink,Purple,L,Red Joker,93,24,22,Blue Team
 Week 3,Drive-In (TB),Pink,Yellow,W,Red Joker,93,14,16,Red Team
 Week 5,Quarry (CTF),Pink,Teal,L,Red Joker,93,20,24,Red Team
+Week 5,Clearcut (TB),Pink,Black,W,Red Joker,93,18,17,Red Team
 Week 1,River (TB),Pink,Green,W,Spud,27,19,16,Blue Team
 Week 1,Homestead (TB),Pink,Teal,L,Spud,27,10,26,Red Team
 Week 2,Clearcut (TB),Pink,Purple,L,Spud,27,14,25,Blue Team
@@ -166,6 +182,7 @@ Week 2,Quarry (CTF),Purple,Orange,W,M24,72,41,36,Blue Team
 Week 2,Clearcut (TB),Purple,Pink,W,M24,72,39,27,Red Team
 Week 3,Spillway (TB),Purple,White,Forfeit (W),M24,72,,27,
 Week 5,Quarry (CTF),Purple,Yellow,L,M24,72,43,32,Red Team
+Week 5,Clearcut (TB),Purple,Orange,W,M24,72,32,22,Red Team
 Week 1,River (TB),Purple,Black,Forfeit (W),Rubix,102,,,
 Week 1,Homestead (TB),Purple,Yellow,L,Rubix,102,30,29,Red Team
 Week 2,Quarry (CTF),Purple,Orange,W,Rubix,102,50,28,Blue Team
@@ -174,12 +191,14 @@ Week 3,Drive-In (TB),Purple,Green,W,Rubix,102,34,14,Blue Team
 Week 4,River (CTF),Purple,Teal,W,Rubix,102,35,31,Red Team
 Week 4,Homestead (TB),Purple,Black,W,Rubix,102,37,17,Red Team
 Week 5,Quarry (CTF),Purple,Yellow,L,Rubix,102,30,23,Red Team
+Week 5,Clearcut (TB),Purple,Orange,W,Rubix,102,25,22,Red Team
 Week 1,River (TB),Purple,Black,Forfeit (W),SosaB,0,,,
 Week 1,Homestead (TB),Purple,Yellow,L,SosaB,0,12,20,Red Team
 Week 2,Quarry (CTF),Purple,Orange,W,SosaB,0,29,27,Blue Team
 Week 3,Spillway (TB),Purple,White,Forfeit (W),SosaB,0,,27,
 Week 3,Drive-In (TB),Purple,Green,W,SosaB,0,21,17,Blue Team
 Week 4,Homestead (TB),Purple,Black,W,SosaB,0,7,23,Red Team
+Week 5,Clearcut (TB),Purple,Orange,W,SosaB,0,16,16,Red Team
 Week 1,River (TB),Purple,Black,Forfeit (W),Splitmoon,59,,,
 Week 1,Homestead (TB),Purple,Yellow,L,Splitmoon,59,27,29,Red Team
 Week 2,Clearcut (TB),Purple,Pink,W,Splitmoon,59,27,34,Red Team
@@ -188,6 +207,7 @@ Week 3,Drive-In (TB),Purple,Green,W,Splitmoon,59,24,24,Blue Team
 Week 4,River (CTF),Purple,Teal,W,Splitmoon,59,42,35,Red Team
 Week 4,Homestead (TB),Purple,Black,W,Splitmoon,59,36,24,Red Team
 Week 5,Quarry (CTF),Purple,Yellow,L,Splitmoon,59,42,27,Red Team
+Week 5,Clearcut (TB),Purple,Orange,W,Splitmoon,59,27,25,Red Team
 Week 1,Homestead (TB),Teal,Pink,W,Danger Girl,0,12,13,Blue Team
 Week 2,Clearcut (TB),Teal,Green,W,Danger Girl,0,9,9,Red Team
 Week 3,Drive-In (TB),Teal,Black,W,Danger Girl,0,11,15,Blue Team
@@ -199,6 +219,7 @@ Week 2,Quarry (CTF),Teal,White,L,Daniele,47,19,33,Red Team
 Week 3,Spillway (TB),Teal,Yellow,W,Daniele,47,30,12,Red Team
 Week 3,Drive-In (TB),Teal,Black,W,Daniele,47,28,23,Blue Team
 Week 4,River (CTF),Teal,Purple,L,Daniele,47,33,28,Blue Team
+Week 5,Clearcut (TB),Teal,White,W,Daniele,47,27,19,Red Team
 Week 1,River (TB),Teal,Orange,W,DarkMoon,0,8,16,Blue Team
 Week 1,Homestead (TB),Teal,Pink,W,DarkMoon,0,21,25,Blue Team
 Week 2,Clearcut (TB),Teal,Green,W,DarkMoon,0,24,15,Red Team
@@ -213,17 +234,20 @@ Week 2,Clearcut (TB),Teal,Green,W,Ironman,124,28,16,Red Team
 Week 3,Spillway (TB),Teal,Yellow,W,Ironman,124,22,17,Red Team
 Week 4,River (CTF),Teal,Purple,L,Ironman,124,31,30,Blue Team
 Week 5,Quarry (CTF),Teal,Pink,W,Ironman,124,46,33,Blue Team
+Week 5,Clearcut (TB),Teal,White,W,Ironman,124,22,24,Red Team
 Week 2,Quarry (CTF),Teal,White,L,Jedi,48,32,30,Red Team
 Week 2,Clearcut (TB),Teal,Green,W,Jedi,48,39,17,Red Team
 Week 3,Spillway (TB),Teal,Yellow,W,Jedi,48,18,23,Red Team
 Week 4,River (CTF),Teal,Purple,L,Jedi,48,29,33,Blue Team
 Week 4,Homestead (TB),Teal,Orange,W,Jedi,48,25,14,Red Team
+Week 5,Clearcut (TB),Teal,White,W,Jedi,48,26,20,Red Team
 Week 1,River (TB),Teal,Orange,W,Sun,73,29,21,Blue Team
 Week 2,Quarry (CTF),Teal,White,L,Sun,73,41,31,Red Team
 Week 3,Spillway (TB),Teal,Yellow,W,Sun,73,30,19,Red Team
 Week 3,Drive-In (TB),Teal,Black,W,Sun,73,30,23,Blue Team
 Week 4,Homestead (TB),Teal,Orange,W,Sun,73,37,26,Red Team
 Week 5,Quarry (CTF),Teal,Pink,W,Sun,73,31,20,Blue Team
+Week 5,Clearcut (TB),Teal,White,W,Sun,73,25,23,Red Team
 Week 1,River (TB),White,Yellow,L,Agent-Lagz,71,22,21,Red Team
 Week 2,Quarry (CTF),White,Teal,W,Agent-Lagz,71,29,31,Blue Team
 Week 2,Clearcut (TB),White,Black,W,Agent-Lagz,71,31,16,Blue Team
@@ -232,6 +256,7 @@ Week 3,Drive-In (TB),White,Orange,Forfeit (W),Agent-Lagz,71,,16,
 Week 4,River (CTF),White,Pink,W,Agent-Lagz,71,22,12,Blue Team
 Week 4,Homestead (TB),White,Yellow,L,Agent-Lagz,71,36,21,Blue Team
 Week 5,Quarry (CTF),White,Green,W,Agent-Lagz,71,25,14,Blue Team
+Week 5,Clearcut (TB),White,Teal,L,Agent-Lagz,71,19,22,Blue Team
 Week 1,River (TB),White,Yellow,L,Eddie,9,20,29,Red Team
 Week 1,Homestead (TB),White,Green,L,Eddie,9,25,34,Red Team
 Week 2,Quarry (CTF),White,Teal,W,Eddie,9,38,40,Blue Team
@@ -241,15 +266,18 @@ Week 3,Drive-In (TB),White,Orange,Forfeit (W),Eddie,9,,25,
 Week 4,River (CTF),White,Pink,W,Eddie,9,19,13,Blue Team
 Week 4,Homestead (TB),White,Yellow,L,Eddie,9,16,29,Blue Team
 Week 5,Quarry (CTF),White,Green,W,Eddie,9,41,23,Blue Team
+Week 5,Clearcut (TB),White,Teal,L,Eddie,9,15,30,Blue Team
 Week 1,Homestead (TB),White,Green,L,Jam,68,23,13,Red Team
 Week 2,Clearcut (TB),White,Black,W,Jam,68,27,16,Blue Team
 Week 3,Spillway (TB),White,Purple,Forfeit (L),Jam,68,,16,
 Week 3,Drive-In (TB),White,Orange,Forfeit (W),Jam,68,,16,
 Week 4,Homestead (TB),White,Yellow,L,Jam,68,13,17,Blue Team
+Week 5,Clearcut (TB),White,Teal,L,Jam,68,27,23,Blue Team
 Week 1,River (TB),White,Yellow,L,Mr. Top Hat,35,20,28,Red Team
 Week 3,Spillway (TB),White,Purple,Forfeit (L),Mr. Top Hat,35,,28,
 Week 3,Drive-In (TB),White,Orange,Forfeit (W),Mr. Top Hat,35,,28,
 Week 4,River (CTF),White,Pink,W,Mr. Top Hat,35,14,11,Blue Team
+Week 5,Clearcut (TB),White,Teal,L,Mr. Top Hat,35,25,25,Blue Team
 Week 1,River (TB),White,Yellow,L,Reversaltrigger,3,25,22,Red Team
 Week 1,Homestead (TB),White,Green,L,Reversaltrigger,3,17,20,Red Team
 Week 2,Quarry (CTF),White,Teal,W,Reversaltrigger,3,32,25,Blue Team
@@ -267,6 +295,7 @@ Week 5,Quarry (CTF),White,Green,W,Rodman,69,18,9,Blue Team
 Week 1,River (TB),Yellow,White,W,Andromedastrike,10,19,21,Blue Team
 Week 2,Clearcut (TB),Yellow,Orange,W,Andromedastrike,10,30,11,Red Team
 Week 3,Drive-In (TB),Yellow,Pink,L,Andromedastrike,10,21,29,Blue Team
+Week 5,Clearcut (TB),Yellow,Green,W,Andromedastrike,10,24,19,Red Team
 Week 1,Homestead (TB),Yellow,Purple,W,Evil Pancake,15,23,22,Blue Team
 Week 2,Quarry (CTF),Yellow,Green,W,Evil Pancake,15,39,22,Red Team
 Week 2,Clearcut (TB),Yellow,Orange,W,Evil Pancake,15,13,14,Red Team
@@ -274,6 +303,7 @@ Week 3,Spillway (TB),Yellow,Teal,L,Evil Pancake,15,23,24,Blue Team
 Week 4,River (CTF),Yellow,Black,W,Evil Pancake,15,36,23,Red Team
 Week 4,Homestead (TB),Yellow,White,W,Evil Pancake,15,24,22,Red Team
 Week 5,Quarry (CTF),Yellow,Purple,W,Evil Pancake,15,16,31,Blue Team
+Week 5,Clearcut (TB),Yellow,Green,W,Evil Pancake,15,20,20,Red Team
 Week 1,River (TB),Yellow,White,W,Red,10,25,21,Blue Team
 Week 1,Homestead (TB),Yellow,Purple,W,Red,10,17,24,Blue Team
 Week 2,Quarry (CTF),Yellow,Green,W,Red,10,24,23,Red Team
@@ -282,6 +312,7 @@ Week 3,Drive-In (TB),Yellow,Pink,L,Red,10,19,19,Blue Team
 Week 4,River (CTF),Yellow,Black,W,Red,10,23,29,Red Team
 Week 4,Homestead (TB),Yellow,White,W,Red,10,24,23,Red Team
 Week 5,Quarry (CTF),Yellow,Purple,W,Red,10,19,33,Blue Team
+Week 5,Clearcut (TB),Yellow,Green,W,Red,10,27,17,Red Team
 Week 1,River (TB),Yellow,White,W,Seanio,162,35,22,Blue Team
 Week 1,Homestead (TB),Yellow,Purple,W,Seanio,162,34,23,Blue Team
 Week 2,Quarry (CTF),Yellow,Green,W,Seanio,162,33,20,Red Team
@@ -291,6 +322,7 @@ Week 3,Drive-In (TB),Yellow,Pink,L,Seanio,162,42,24,Blue Team
 Week 4,River (CTF),Yellow,Black,W,Seanio,162,62,22,Red Team
 Week 4,Homestead (TB),Yellow,White,W,Seanio,162,28,25,Red Team
 Week 5,Quarry (CTF),Yellow,Purple,W,Seanio,162,43,31,Blue Team
+Week 5,Clearcut (TB),Yellow,Green,W,Seanio,162,29,11,Red Team
 Week 3,Drive-In (TB),Yellow,Pink,L,Taser Lag,70,14,28,Blue Team
 Week 4,River (CTF),Yellow,Black,W,Taser Lag,70,32,27,Red Team
 Week 1,River (TB),Yellow,White,W,Trash,9,21,23,Blue Team
