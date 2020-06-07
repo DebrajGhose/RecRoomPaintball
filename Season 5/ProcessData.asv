@@ -147,7 +147,7 @@ if costvskd == 1 %calculate cost vs kd for team battle games
     costs = [];
     dotcolors = [];
     
-    for ii = 2:size(playerlist,1)
+    for ii = 1:size(playerlist,1)
         
         kds = [];
         
@@ -225,7 +225,7 @@ if playerkdspread == 1
     meankds = []; %store all players kds here
     dotcolors = [];
     
-    for ii = 2:size(playerlist,1)
+    for ii = 1:size(playerlist,1)
         
         kds = [];
         
@@ -235,22 +235,32 @@ if playerkdspread == 1
                
                 kds = [kds ; GD{jj,8}/GD{jj,9}]; %get kd
                 dotcolor = colors(find(strcmp(teamlist, GD{jj,3})),:); %get dot color
-                
+                oppdotcolr = colors(find(strcmp(teamlist, GD{jj,3})),:);%get color of opponent
             end
             
         end
         
         hold on
         
-        scatter(ones(numel(kds),1)*ii,kds,'fill','MarkerFaceColor',dotcolor,'MarkerEdgeColor','k');
+        scatter(ones(numel(kds),1)*ii,kds,60,'fill','MarkerFaceColor',dotcolor,'MarkerEdgeColor','k');
         
-        %set(gca,'XTickLabel',{[]});
+        for ii = [6.5:6:42.5]
+            
+            plot( [ii ii] , [ 0, 3  ] ,'--k' )
+            
+        end
+        %
         set(gca,'FontSize',15)
         
+        title('k/d spread for team battle mode')
+        
+        xlim([0 49])
         
     end
     
-    
+    xticks([1:size(playerlist,1)]-0.7)
+    xticklabels(playerlist)
+    xtickangle(80)
 end
 
 

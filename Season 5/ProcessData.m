@@ -12,10 +12,11 @@ colors = [0 0 0;...
      0.9970    0.7659    0.2199];
  %scatter(1:8,1:8,400,'fill','cdata',colors)
 
-%%
+%% format data into computationally useable format
+
 formatdata = 0;
-costvskd = 0;
-playerkdspread = 1;
+costvskd = 1;
+playerkdspread = 0;
 
 
 if formatdata == 1
@@ -72,25 +73,23 @@ if formatdata == 1
     
     GDind = 1; %index for player line
     
-    for ii = 5:52
+    for ii = 5:52 %go down rows to cover all players
         
         Team = A{ii,2}; Player = A{ii,3}; Cost = str2double(A{ii,4}(2:end)); Hits = []; Outs=[]; Week = []; GameType = []; Side = []; Result = []; Opponent = [];
         
         jj = 5;
         
-        while jj<size(A,2)
+        while jj<size(A,2) % go along the columns and store values per game into rows of another matrix
             
-            switch char(A(4,jj))
+            switch char(A(4,jj)) %check what you are looking at
                 
                 case 'Hits'
                     
                     if ~isempty(A{ii,jj})
                         
                         Hits = A{ii,jj};
-                        Week = A{1,jj};
-                        GameType = A{2,jj};
+                       
                         Side = A{3,jj};
-                        
                     end
                     
                 case 'Outs'
@@ -107,6 +106,14 @@ if formatdata == 1
                         GameType = A{2,jj};
                     end
                     
+                case 'W/L' %this is another version of W/L/T that appears in the document
+                    
+                    if ~isempty(A{ii,jj})
+                        Result = A{ii,jj};
+                        Week = A{1,jj};
+                        GameType = A{2,jj};
+                    end
+                    
                 case 'Opponent'
                     
                     if ~isempty(A{ii,jj})
@@ -114,7 +121,7 @@ if formatdata == 1
                     end
             end
             
-            if (~strcmp(char(A{2,jj}),char(A{2,jj+1})) && ~isempty(Result)) %switch to new row when you are done with a game
+            if (~strcmp(char(A{2,jj}),char(A{2,jj+1})) && ~isempty(Result)) %switch to new row in the matrix you are copying to when you are done with a game
                 
                 GDind = GDind + 1;
                 
@@ -137,6 +144,7 @@ if formatdata == 1
     
 end
 
+%% generate cost vs k/d plots
 
 if costvskd == 1 %calculate cost vs kd for team battle games
 
@@ -214,9 +222,13 @@ if costvskd == 1 %calculate cost vs kd for team battle games
     
     end
     
+   set(gcf,'Units','Normalized','Position',[0 0 1 1])
    
+    saveas(gcf,'CostvsKD.svg')
     
 end
+
+%% get k/d spread for all players
 
 if playerkdspread == 1
    
@@ -235,7 +247,7 @@ if playerkdspread == 1
                
                 kds = [kds ; GD{jj,8}/GD{jj,9}]; %get kd
                 dotcolor = colors(find(strcmp(teamlist, GD{jj,3})),:); %get dot color
-                
+                oppdotcolr = colors(find(strcmp(teamlist, GD{jj,3})),:);%get color of opponent
             end
             
         end
@@ -261,6 +273,9 @@ if playerkdspread == 1
     xticks([1:size(playerlist,1)]-0.7)
     xticklabels(playerlist)
     xtickangle(80)
+    set(gcf,'Position',[100 100 1500 500])
+    saveas(gcf,'KDspread.svg')
+    
 end
 
 
