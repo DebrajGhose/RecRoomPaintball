@@ -14,8 +14,8 @@ colors = [0 0 0;...
 
 %%
 formatdata = 0;
-costvskd = 1;
-playerkdspread = 0;
+costvskd = 0;
+playerkdspread = 1;
 
 
 if formatdata == 1
@@ -242,14 +242,21 @@ if playerkdspread == 1
         
         hold on
         
-        scatter(ones(numel(kds),1)*ii,kds,'fill','MarkerFaceColor',dotcolor,'MarkerEdgeColor','k');
+        scatter(ones(numel(kds),1)*ii,kds,60,'fill','MarkerFaceColor',dotcolor,'MarkerEdgeColor','k');
         
+        for ii = [6.5:6:42.5]
+            
+            plot( [ii ii] , [ 0, 3  ] ,'--k' )
+            
+        end
         %
         set(gca,'FontSize',15)
         
+        title('k/d spread for team battle mode')
+        
     end
     
-    xticks([1:size(playerlist,1)])
+    xticks([1:size(playerlist,1)]-0.7)
     xticklabels(playerlist)
     xtickangle(80)
 end
