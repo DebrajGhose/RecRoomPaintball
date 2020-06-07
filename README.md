@@ -11,4 +11,6 @@ Error bars (when present) represent standard error of the mean. The dotted black
 
 ## k/d spread across all players for Team Battle mode
 
+Rectangle bar colors represent teams. Dot color is what team a player was playing against when they achieved a particular k/d.
+
 ![k/ds for each player](https://github.com/DebrajGhose/RecRoomPaintball/blob/master/Season%205/KDspread.svg)
