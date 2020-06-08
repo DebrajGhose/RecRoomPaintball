@@ -15,8 +15,8 @@ colors = [0 0 0;...
 %% format data into computationally useable format
 
 formatdata = 0;
-costvskd = 0;
-playerkdspread = 1;
+costvskd = 1;
+playerkdspread = 0;
 
 
 if formatdata == 1
@@ -192,7 +192,7 @@ if costvskd == 1 %calculate cost vs kd for team battle games
     
     plot( [min(costs), max(costs)] , [ min(costs)*pf(1) + pf(2) , max(costs)*pf(1) + pf(2) ] , '--k' )
     
-    scatter( costs, meankds , 50 , 'fill' ,'cdata' , dotcolors ,'MarkerEdgeColor', 'k' ); %overlay scatte plot
+    scatter( costs, meankds , 15 , 'fill' ,'MarkerEdgeColor', 'k' , 'MarkerFaceColor' , [0.5 0.5 0.5] )% ,'cdata' , dotcolors  ); %overlay scatte plot
     xlabel('Player Cost');
     ylabel('Mean k/d')
     title('Cost vs k/d (Team Battle)')
@@ -204,13 +204,16 @@ if costvskd == 1 %calculate cost vs kd for team battle games
     for ii=1:8
         
         subplot(3,3,ii+1)
+        
         hold on
         
         plot( [min(costs), max(costs)] , [ min(costs)*pf(1) + pf(2) , max(costs)*pf(1) + pf(2) ] , '--k' )
         
         teamplayers = ismember(dotcolors,colors(ii,:) ,'row');
         usecolor = dotcolors(find(teamplayers,1),:);
-        errorbar(costs(teamplayers),meankds(teamplayers),errkds(teamplayers),'o','Color',usecolor.*[0.8 0.8 0.8],'MarkerEdgeColor', 'k','MarkerFaceColor', usecolor,'MarkerSize',7);
+        %errorbar(costs(teamplayers),meankds(teamplayers),errkds(teamplayers),'o','Color',usecolor.*[0.8 0.8 0.8],'MarkerEdgeColor', 'k','MarkerFaceColor', usecolor,'MarkerSize',7);
+        
+        scatter(costs(teamplayers),meankds(teamplayers), 15 , 'fill' ,'MarkerFaceColor' , usecolor ,'MarkerEdgeColor', 'k' );
         
         ylim([0 3])
         xlim([0 180])
@@ -223,11 +226,14 @@ if costvskd == 1 %calculate cost vs kd for team battle games
         
         title(teamlist{ii,1})
         
+        
     end
     
     set(gcf,'Units','Normalized','Position',[0 0 1 1])
     
     saveas(gcf,'CostvsKD.svg')
+    
+    fig2plotly(gcf,'offline',true,'filename','CostvsKD','strip',false)
     
 end
 
