@@ -229,7 +229,7 @@ if costvskd == 1 %calculate cost vs kd for team battle games
         
     end
     
-    set(gcf,'Units','Normalized','Position',[0 0 1 1])
+    set(gcf,'Units','Normalized','Position',[0 0 0.5 0.5])
     
     saveas(gcf,'CostvsKD.svg')
     
