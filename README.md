@@ -6,11 +6,11 @@ Data collected by M24 (https://rec.net/user/M24rink).
 
 Error bars (when present) represent standard error of the mean. The dotted black line is a linear fit to the entire cost vs k/d for the entire data set (first graph).
 
-![Cost vs k/d](https://raw.githubusercontent.com/DebrajGhose/RecRoomPaintball/97a03a6080cd2d71011625c273354d4484139cdc/Season%205/CostvsKD.svg)
+![Cost vs k/d](https://github.com/DebrajGhose/RecRoomPaintball/blob/master/Season%205/CostvsKD.svg)
 
 
 ## k/d spread across all players for Team Battle mode
 
 Rectangle bar colors represent teams. Dot color is what team a player was playing against when they achieved a particular k/d.
 
-![k/ds for each player](https://raw.githubusercontent.com/DebrajGhose/RecRoomPaintball/7ab83084db1e2c84453c86e285771bf8c61d8dd5/Season%205/KDspread.svg)
+![k/ds for each player](https://github.com/DebrajGhose/RecRoomPaintball/blob/master/Season%205/KDspread.svg)
