@@ -233,7 +233,7 @@ if costvskd == 1 %calculate cost vs kd for team battle games
     
     saveas(gcf,'CostvsKD.svg')
     
-    fig2plotly(gcf,'offline',true,'filename','CostvsKD','strip',false,'include_plotlyjs','cdn')
+    fig2plotly(gcf,'offline',true,'filename','CostvsKD','strip',false,'include_plotlyjs', false)
     
 end
 
