@@ -33,7 +33,7 @@ In the third panel, we obtain Impact (I) for each player by muliplying their **v
 
 Formula (all angles are in degrees):
 
-I = ((k/T)<sup>2</sup> + (d/T)<sup>2</sup>)<sup>0.5</sup>*( 45 - tan<sup>-1</sup>(k/d) )/45.
+I = ((k/T)<sup>2</sup> + (d/T)<sup>2</sup>)<sup>0.5</sup>*( tan<sup>-1</sup>(k/d) - 45 )/45.
 
 Here, k is kills, d is deaths, T is all kills + deaths. Note that I goes from -1 to 1.
 
