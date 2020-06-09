@@ -15,8 +15,8 @@ colors = [0 0 0;...
 %% format data into computationally useable format
 
 formatdata = 0;
-costvskd = 1;
-playerkdspread = 0;
+costvskd = 0;
+playerkdspread = 1;
 
 
 if formatdata == 1
@@ -192,7 +192,7 @@ if costvskd == 1 %calculate cost vs kd for team battle games
     
     plot( [min(costs), max(costs)] , [ min(costs)*pf(1) + pf(2) , max(costs)*pf(1) + pf(2) ] , '--k' )
     
-    scatter( costs, meankds , 15 , 'fill' ,'MarkerEdgeColor', 'k' , 'MarkerFaceColor' , [0.5 0.5 0.5] )% ,'cdata' , dotcolors  ); %overlay scatte plot
+    scatter( costs, meankds , 15 , 'fill' ,'MarkerEdgeColor', 'k' ,'cdata' , dotcolors  ); %overlay scatte plot
     xlabel('Player Cost');
     ylabel('Mean k/d')
     title('Cost vs k/d (Team Battle)')
@@ -233,7 +233,7 @@ if costvskd == 1 %calculate cost vs kd for team battle games
     
     saveas(gcf,'CostvsKD.svg')
     
-    fig2plotly(gcf,'offline',true,'filename','CostvsKD','strip',false,'include_plotlyjs', false)
+    %fig2plotly(gcf,'offline',true,'filename','CostvsKD','strip',false,'include_plotlyjs', false)
     
 end
 
@@ -248,6 +248,7 @@ if playerkdspread == 1
     
     
     hold on
+    %{g
     for aa = [0.5:1:49]
         plot( [ aa aa  ],[ 0  3  ] ,'LineStyle' ,'--' ,'Color', [0.8 0.8 0.8]  )
     end
@@ -259,10 +260,10 @@ if playerkdspread == 1
         plot( [ aa aa  ],[ 0  3  ] , 'k'   )
     end
     
-    
-    
     grid on
     set(gca,'XGrid','off')
+    %}
+    
     
     for ii = 1:size(playerlist,1)
         
@@ -284,7 +285,7 @@ if playerkdspread == 1
         
         
         %scatter(ones(numel(kds),1)*ii,kds,200,'fill','MarkerFaceColor',dotcolor,'MarkerEdgeColor','k') %k/ds of players
-        scatter(ones(numel(kds),1)*ii + 0.2*(rand(numel(kds),1)-0.5),kds,60,'fill','cdata', oppdotcolors ,'MarkerEdgeColor','k' ) %show color of opponents
+        scatter(ones(numel(kds),1)*ii + 0.2*(rand(numel(kds),1)-0.5),kds,15,'fill','cdata', oppdotcolors ,'MarkerEdgeColor','k' ) %show color of opponents
         
         
         %
@@ -301,8 +302,9 @@ if playerkdspread == 1
     xticks([1:size(playerlist,1)]-0.5)
     xticklabels(playerlist)
     xtickangle(80)
-    set(gcf,'Units','Normalized','Position',[0 0 1 1])
-    saveas(gcf,'KDspread.svg')
+    set(gcf,'Units','Normalized','Position',[0 0 0.8 0.8])
+    %saveas(gcf,'KDspread.svg')
+    fig2plotly(gcf,'offline',true,'filename','KDspread')
     
 end
 
