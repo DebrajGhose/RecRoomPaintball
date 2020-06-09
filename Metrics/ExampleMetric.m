@@ -44,6 +44,8 @@ subplot(1,3,2)
 
 hold on
 
+plot([ 0 1 ],[ 0 1 ] , '--k')
+
 scatter( TeamAnorm(2,:) , TeamAnorm(1,:) ,100,'fill' );
 scatter( TeamBnorm(2,:) , TeamBnorm(1,:) ,100,'fill' );
 axis equal
@@ -61,7 +63,8 @@ draw_arrow(  [0 0] , [ TeamBnorm(2,1)  TeamBnorm(1,1)] )
 %plot( [0 TeamBnorm(2,4)],[ 0 TeamBnorm(1,4)]  )
 
 
-legend('Team A' , 'Team B')
+
+legend('45 degree line','Team A','Team B')
 
 grid on
 
