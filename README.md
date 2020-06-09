@@ -21,14 +21,15 @@ Kills/Deaths (k/d) ratio doesn't capture a player's contribution to the game's o
 
 | Team | Name | Kills | Deaths |
 |------|------|-------|--------|
-| A    | Zel  | 4     | 1      |
-| A    | Val  | 41    | 32     |
-| A    | Raz  | 20    | 33     |
-| A    | Ash  | 6     | 34     |
-| B    | Ram  | 21    | 23     |
-| B    | Lok  | 12    | 13     |
-| B    | Eli  | 27    | 25     |
-| B    | Tir  | 40    | 10     |
+| A    | Ram  | 21    | 23     |
+| A    | Lok  | 12    | 13     |
+| A    | Eli  | 27    | 25     |
+| A    | Tir  | 40    | 10     |
+| B    | Zel  | 4     | 1      |
+| B    | Val  | 41    | 32     |
+| B    | Raz  | 20    | 33     |
+| B    | Ash  | 6     | 34     |
+
 
 Both Tir and Zel have a k/d of 4, but the magnitude of scores suggest that Tir might have had a bigger influence on the game's outcome. Thus, I propose using a new metric called *"Impact"*, which attempts to use player scores in Team Battle mode to assess how much they affected a game's outcome (I realize that not all player contributions are successfully captured by the scores alone).
 
