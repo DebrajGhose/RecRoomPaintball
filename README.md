@@ -30,7 +30,7 @@ Kills/Deaths (k/d) ratio doesn't capture a player's contribution to the game's o
 | B    | Eli  | 27    | 25     |
 | B    | Tir  | 40    | 10     |
 
-Both Tir and Zel have a k/d of 4, but the magnitude of scores suggest that Tir might have had a bigger influence on the game's outcome. Thus, I propose using a new metric called *"Impact"*, which attempts to use player scores in Team Battle mode to asses how much they affected a game's outcome (I realize that not all player contributions are successfully captured by the scores alone).
+Both Tir and Zel have a k/d of 4, but the magnitude of scores suggest that Tir might have had a bigger influence on the game's outcome. Thus, I propose using a new metric called *"Impact"*, which attempts to use player scores in Team Battle mode to assess how much they affected a game's outcome (I realize that not all player contributions are successfully captured by the scores alone).
 
 Let's plot these results.
 
@@ -38,13 +38,14 @@ Let's plot these results.
 
 In the graph on the left, we plot **normalized kills vs deaths** (see equation below) for each player. Each dot defines a vector from the origin that has a magnitude and angle. The magnitude captures a player's "effect" on the game and the angle tells you if they performed favorably (angle>45) or unfavorably (angle<45).
 
-Intuitively, both Zel and Tir have the same k/d, but Tir clearly contributed more to the game. This is captured by the magnitudes of their respecive vectors. On the other hand, Tir and Ash contributed heavily to the game's outcome but Tir's perfomance was favorable for his team, while Ash's performance was unfavorable for his team -- this is reflected by the angles of their respective vectors.
+Zel and Tir have the same k/d, but Tir likely had a bigger influence on the game's outcome. This is captured by the difference in magnitudes of their respecive vectors. On the other hand, Tir and Ash contributed heavily to the game's outcome but Tir's perfomance was favorable for his team, while Ash's performance was unfavorable for his team -- this is reflected by the anglular distacnes of their respective vectors from the 45 degree line.
 
-In the graph on the right, we obtain a bar chart for Impact (I) of each player by muliplying their **vector magnitude** with a **scaled and normalized vector angle**.
+In the graph on the right, we obtain a bar chart for **Impact (I)** of each player by muliplying their **vector magnitude** with a **scaled and normalized vector angle** and scaling it to be between -100 to 100. A score of 100 would mean the player on the winning team got all the kills and died 0 times. A score of -100 would mean the player on the losing team got recieved every kill and achieved 0 kills.
 
-Formula (all angles are in degrees):
+Calculating Impact (all angles are in degrees):
 
-I = ((k/T)<sup>2</sup> + (d/T)<sup>2</sup>)<sup>0.5</sup>*( tan<sup>-1</sup>(k/d) - 45 )/45.
+1. For each player, find normalized **kills (k)** and **deaths (d)** by dividing both numbers by **total kills and deaths (T)**. Normalized kills = k/T. Normalized deaths = d/T. E.g. Tir's normalized kills = 40/171 and normalized deaths = 10/171.
 
-Here, k is kills, d is deaths, T is all kills + deaths (T is used to obtain normalized kills and deaths). Note that I goes from -1 to 1.
+2. Find **resultant vector (R)** and **normalized angle from 45 degrees (t)**. R =  ((k/T)<sup>2</sup> + (d/T)<sup>2</sup>)<sup>0.5</sup>. t = ( tan<sup>-1</sup>(k/d) - 45 )/45.
 
+3. Calculate Impact. I = 100Rt.  Expanded formula for impact is I = 100((k/T)<sup>2</sup> + (d/T)<sup>2</sup>)<sup>0.5</sup>( tan<sup>-1</sup>(k/d) - 45 )/45.
