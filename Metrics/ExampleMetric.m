@@ -72,7 +72,7 @@ subplot(1,2,2)
 
 teamts = (teamts - pi/4)/(pi/4);
 
-bar( teamts.*teamrs  );
+bar( teamts.*teamrs*100 );
 axis square
 
 ylabel('Impact')
@@ -80,12 +80,6 @@ ylabel('Impact')
 xticklabels(TeamABnames)
 xtickangle(70)
 set(gca,'FontSize',10)
-%% second example
-
-%axis square
-
-TeamAkd = [ 100 0 0 0 ; 0 0 0 0  ]; 
-TeamBkd = [ 0 0 0 0 ; 100 0 0 0 ];
 
 
 function [] = draw_arrow(a,b)
