@@ -23,14 +23,14 @@ Consider the results of from a Deathmatch/Team Battle game shown in the followin
 
 | Team | Name | Kills | Deaths |
 |------|------|-------|--------|
-| Blue | Zel  | 4     | 1      |
-| Blue | Val  | 41    | 32     |
-| Blue | Raz  | 20    | 33     |
-| Blue | Ash  | 6     | 34     |
-| Red  | Ram  | 21    | 23     |
-| Red  | Lok  | 12    | 13     |
-| Red  | Eli  | 27    | 25     |
-| Red  | Tir  | 40    | 10     |
+| A    | Zel  | 4     | 1      |
+| A    | Val  | 41    | 32     |
+| A    | Raz  | 20    | 33     |
+| A    | Ash  | 6     | 34     |
+| B    | Ram  | 21    | 23     |
+| B    | Lok  | 12    | 13     |
+| B    | Eli  | 27    | 25     |
+| B    | Tir  | 40    | 10     |
 
 ![Impact metric](https://github.com/DebrajGhose/RecRoomPaintball/blob/master/Metrics/Metric.svg)
 
