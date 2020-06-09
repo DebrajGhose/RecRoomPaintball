@@ -19,6 +19,8 @@ Rectangle bar colors represent teams. Dot color is what team a player was playin
 
 k/d ratio doesn't capture a player's contribution to the game's outcome. I propose using "Impact", which attempts to use player scores in Team Battle mode to asses how much they affected the game's outcome (I realize that not all player contributions are successfully captured by the scores alone).
 
+Consider the results of a game shown in the figure below.
+
 ![Impact metric](https://github.com/DebrajGhose/RecRoomPaintball/blob/master/Metrics/Metric.svg)
 
 In the left subplanel above, two teams of four have their kills and deaths shown per player, respectively.
