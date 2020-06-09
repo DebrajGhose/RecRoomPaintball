@@ -23,24 +23,9 @@ TeamBnorm = TeamBkd/Tot;
 
 figure
 
-subplot(1,3,1)
 
-for ii = 1:4
-    
-    text( 0 , ii*0.1 , [ TeamABnames{ii} , ' ' , num2str(TeamAkd(1,ii)) , ' ' , num2str(TeamAkd(2,ii)) ] , 'Units','Normalized','FontSize',10 )
 
-end
-
-for ii = 1:4
-    
-    text( 0 , 0.2+(ii+4)*0.1 , [ TeamABnames{ii+4} , ' ' , num2str(TeamBkd(1,ii)) , ' ' , num2str(TeamBkd(2,ii)) ] , 'Units','Normalized','FontSize',10 )
-
-end
-
-axis square
-axis off
-
-subplot(1,3,2)
+subplot(1,2,1)
 
 hold on
 
@@ -72,15 +57,16 @@ grid on
 ylim([-0.04 0.3])
 xlim([-0.04 0.3])
 
-xlabel('Deaths')
-ylabel('Kills')
+xlabel('Normalized Deaths')
+ylabel('Normalized Kills')
 
 set(gca,'FontSize',10)
 
 
 
 %%
-subplot(1,3,3)
+subplot(1,2,2)
+
 
 [ teamts , teamrs ] = cart2pol( [ TeamAnorm(2,:) , TeamBnorm(2,:)   ]' , [ TeamAnorm(1,:) , TeamBnorm(1,:)   ]'      );
 
@@ -89,7 +75,7 @@ teamts = (teamts - pi/4)/(pi/4);
 bar( teamts.*teamrs  );
 axis square
 
-ylabel('Contribution')
+ylabel('Impact')
 
 xticklabels(TeamABnames)
 xtickangle(70)
