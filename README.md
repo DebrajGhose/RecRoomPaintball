@@ -31,9 +31,9 @@ Intuitively both, Zel and Tir have the same k/d, but Tir clearly contributed mor
 
 In the third panel, we obtain Impact (I) for each player by muliplying their **vector magnitude** with the **scaled and normalized vector angle**.
 
-Formula:
+Formula (all angles are in degrees):
 
-I = ((k/T)<sup>2</sup> + (d/T)<sup>2</sup>)<sup>0.5</sup>x( 45 - tan<sup>-1</sup>(k/d) )/45.
+I = ((k/T)<sup>2</sup> + (d/T)<sup>2</sup>)<sup>0.5</sup>*( 45 - tan<sup>-1</sup>(k/d) )/45.
 
 Here, k is kills, d is deaths, T is all kills + deaths. Note that I goes from -1 to 1.
 
