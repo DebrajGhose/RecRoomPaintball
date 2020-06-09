@@ -27,9 +27,9 @@ In the left subplanel above, two teams of four have their kills and deaths shown
 
 In the middle subpanel, we plot **normalized kills vs deaths** (see equation below) for each player. Each dot defines a vector from the origin that has a magnitude and angle. The magnitude captures a player's "effect" on the game and the angle tells you if they performed favorably (angle>45) or unfavorably (angle<45).
 
-Intuitively both, Zel and Tir have the same k/d, but Tir clearly contributed more to the game, and that is captured by the magnitudes of their respecive vectors. On the other hand, Tir and Ash contributed heavily to the game's outcome but Tir's perfomance was favorable for his team, while Ash's performance was unfavorable for his team -- this is reflected by the angles of their vectors.
+Intuitively, both Zel and Tir have the same k/d, but Tir clearly contributed more to the game. This is captured by the magnitudes of their respecive vectors. On the other hand, Tir and Ash contributed heavily to the game's outcome but Tir's perfomance was favorable for his team, while Ash's performance was unfavorable for his team -- this is reflected by the angles of their respective vectors.
 
-In the third panel, we obtain Impact (I) for each player by muliplying their **vector magnitude** with the **scaled and normalized vector angle**.
+In the third panel, we obtain a bar chart for Impact (I) of each player by muliplying their **vector magnitude** with the **scaled and normalized vector angle**.
 
 Formula (all angles are in degrees):
 
