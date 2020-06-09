@@ -17,23 +17,36 @@ Rectangle bar colors represent teams. Dot color is what team a player was playin
 
 ## The "Impact" metric
 
-k/d ratio doesn't capture a player's contribution to the game's outcome. I propose using "Impact", which attempts to use player scores in Team Battle mode to asses how much they affected the game's outcome (I realize that not all player contributions are successfully captured by the scores alone).
+Kills/Deaths (k/d) ratio doesn't capture a player's contribution to the game's outcome. For example, consider results from the following deathmatch game.
 
-Consider the results of a game shown in the figure below.
+| Team | Name | Kills | Deaths |
+|------|------|-------|--------|
+| A    | Ram  | 21    | 23     |
+| A    | Lok  | 12    | 13     |
+| A    | Eli  | 27    | 25     |
+| A    | Tir  | 40    | 10     |
+| B    | Zel  | 4     | 1      |
+| B    | Val  | 41    | 32     |
+| B    | Raz  | 20    | 33     |
+| B    | Ash  | 6     | 34     |
+
+
+Both Tir and Zel have a k/d of 4, but the magnitude of scores suggest that Tir might have had a bigger influence on the game's outcome. Thus, I propose using a new metric called *"Impact"*, which attempts to use player scores in Team Battle mode to assess how much they affected a game's outcome (I realize that not all player contributions are successfully captured by the scores alone).
+
+Let's plot these results.
 
 ![Impact metric](https://github.com/DebrajGhose/RecRoomPaintball/blob/master/Metrics/Metric.svg)
 
-In the left subplanel above, two teams of four have their kills and deaths shown per player, respectively.
+In the graph on the left, we plot **normalized kills vs deaths** (see equation below) for each player. Each dot defines a vector from the origin that has a magnitude and angle. The magnitude captures a player's "effect" on the game and the angle tells you if they performed favorably (angle>45) or unfavorably (angle<45).
 
-In the middle subpanel, we plot **normalized kills vs deaths** (see equation below) for each player. Each dot defines a vector from the origin that has a magnitude and angle. The magnitude captures a player's "effect" on the game and the angle tells you if they performed favorably (angle>45) or unfavorably (angle<45).
+Zel and Tir have the same k/d, but Tir likely had a bigger influence on the game's outcome. This is captured by the difference in magnitudes of their respecive vectors. On the other hand, Tir and Ash contributed heavily to the game's outcome but Tir's perfomance was favorable for his team, while Ash's performance was unfavorable for his team -- this is reflected by the anglular distacnes of their respective vectors from the 45 degree line.
 
-Intuitively, both Zel and Tir have the same k/d, but Tir clearly contributed more to the game. This is captured by the magnitudes of their respecive vectors. On the other hand, Tir and Ash contributed heavily to the game's outcome but Tir's perfomance was favorable for his team, while Ash's performance was unfavorable for his team -- this is reflected by the angles of their respective vectors.
+In the graph on the right, we obtain a bar chart for **Impact (I)** of each player by muliplying their **vector magnitude** with a **scaled and normalized vector angle** and scaling it to be between -100 to 100. A score of 100 would mean the player on the winning team got all the kills and died 0 times. A score of -100 would mean the player on the losing team got recieved every kill and achieved 0 kills.
 
-In the third panel, we obtain a bar chart for Impact (I) of each player by muliplying their **vector magnitude** with the **scaled and normalized vector angle**.
+Calculating Impact (all angles are in degrees):
 
-Formula (all angles are in degrees):
+1. For each player, find normalized **kills (k)** and **deaths (d)** by dividing both numbers by **total kills in the game (T)** (this will be the same as total deaths in the game; assuming there were no disconnects). Normalized kills = k/T. Normalized deaths = d/T. E.g. Tir's normalized kills = 40/171 and normalized deaths = 10/171, where 171 is the total kills (or total deaths) in the game.
 
-I = ((k/T)<sup>2</sup> + (d/T)<sup>2</sup>)<sup>0.5</sup>*( tan<sup>-1</sup>(k/d) - 45 )/45.
+2. Find **resultant vector (R)** and **normalized angle from 45 degrees (t)**. R =  ((k/T)<sup>2</sup> + (d/T)<sup>2</sup>)<sup>0.5</sup>. t = ( tan<sup>-1</sup>(k/d) - 45 )/45.
 
-Here, k is kills, d is deaths, T is all kills + deaths (T is used to obtain normalized kills and deaths). Note that I goes from -1 to 1.
-
+3. Calculate **Impact (I)**. I = 100Rt.  Expanded formula for impact is I = 100((k/T)<sup>2</sup> + (d/T)<sup>2</sup>)<sup>0.5</sup>( tan<sup>-1</sup>(k/d) - 45 )/45.
