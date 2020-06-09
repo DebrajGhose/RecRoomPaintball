@@ -25,7 +25,7 @@ Consider the results of a game shown in the figure below.
 
 In the left subplanel above, two teams of four have their kills and deaths shown per player, respectively.
 
-In the middle subpanel, we plot **normalized kills vs deaths** for each player. Each dot defines a vector from the origin that has a magnitude and angle. The magnitude captures a player's "effect" on the game and the angle tells you if they performed favorably (angle>45) or unfavorably (angle<45).
+In the middle subpanel, we plot **normalized kills vs deaths** (see equation below) for each player. Each dot defines a vector from the origin that has a magnitude and angle. The magnitude captures a player's "effect" on the game and the angle tells you if they performed favorably (angle>45) or unfavorably (angle<45).
 
 Intuitively both, Zel and Tir have the same k/d, but Tir clearly contributed more to the game, and that is captured by the magnitudes of their respecive vectors. On the other hand, Tir and Ash contributed heavily to the game's outcome but Tir's perfomance was favorable for his team, while Ash's performance was unfavorable for his team -- this is reflected by the angles of their vectors.
 
@@ -35,5 +35,5 @@ Formula (all angles are in degrees):
 
 I = ((k/T)<sup>2</sup> + (d/T)<sup>2</sup>)<sup>0.5</sup>*( tan<sup>-1</sup>(k/d) - 45 )/45.
 
-Here, k is kills, d is deaths, T is all kills + deaths. Note that I goes from -1 to 1.
+Here, k is kills, d is deaths, T is all kills + deaths (T is used to obtain normalized kills and deaths). Note that I goes from -1 to 1.
 
