@@ -44,7 +44,7 @@ In the graph on the right, we obtain a bar chart for **Impact (I)** of each play
 
 Calculating Impact (all angles are in degrees):
 
-1. For each player, find normalized **kills (k)** and **deaths (d)** by dividing both numbers by **total kills in the game (T)** (this will be the same as total deaths in the game; assuming there were no disconnects). Normalized kills = k/T. Normalized deaths = d/T. E.g. Tir's normalized kills = 40/171 and normalized deaths = 10/171.
+1. For each player, find normalized **kills (k)** and **deaths (d)** by dividing both numbers by **total kills in the game (T)** (this will be the same as total deaths in the game; assuming there were no disconnects). Normalized kills = k/T. Normalized deaths = d/T. E.g. Tir's normalized kills = 40/171 and normalized deaths = 10/171, where 171 is the total kills (or total deaths) in the game.
 
 2. Find **resultant vector (R)** and **normalized angle from 45 degrees (t)**. R =  ((k/T)<sup>2</sup> + (d/T)<sup>2</sup>)<sup>0.5</sup>. t = ( tan<sup>-1</sup>(k/d) - 45 )/45.
 
