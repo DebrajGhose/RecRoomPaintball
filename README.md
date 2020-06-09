@@ -48,4 +48,4 @@ Calculating Impact (all angles are in degrees):
 
 2. Find **resultant vector (R)** and **normalized angle from 45 degrees (t)**. R =  ((k/T)<sup>2</sup> + (d/T)<sup>2</sup>)<sup>0.5</sup>. t = ( tan<sup>-1</sup>(k/d) - 45 )/45.
 
-3. Calculate Impact. I = 100Rt.  Expanded formula for impact is I = 100((k/T)<sup>2</sup> + (d/T)<sup>2</sup>)<sup>0.5</sup>( tan<sup>-1</sup>(k/d) - 45 )/45.
+3. Calculate **Impact (I)**. I = 100Rt.  Expanded formula for impact is I = 100((k/T)<sup>2</sup> + (d/T)<sup>2</sup>)<sup>0.5</sup>( tan<sup>-1</sup>(k/d) - 45 )/45.
