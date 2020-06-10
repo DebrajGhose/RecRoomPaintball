@@ -37,7 +37,7 @@ Let's plot these results.
 
 ![Impact metric](https://github.com/DebrajGhose/RecRoomPaintball/blob/master/Metrics/Metric.svg)
 
-In the graph on the left, we plot **normalized kills vs deaths** (see equation below) for each player. Each dot defines a vector from the origin that has a magnitude and angle. The magnitude captures a player's "effect" on the game and the angle tells you if they performed favorably (angle>45) or unfavorably (angle<45).
+In the graph on the left, we plot **normalized kills vs deaths** (see equation below) for each player. Each dot defines a vector from the origin that has a magnitude and angle. The magnitude captures a player's "influence" on the game and the angle tells you if they performed favorably (angle>45) or unfavorably (angle<45).
 
 Zel and Tir have the same k/d, but Tir likely had a bigger influence on the game's outcome. This is captured by the difference in magnitudes of their respecive vectors. On the other hand, Tir and Ash contributed heavily to the game's outcome but Tir's perfomance was favorable for his team, while Ash's performance was unfavorable for his team -- this is reflected by the anglular distacnes of their respective vectors from the 45 degree line.
 
